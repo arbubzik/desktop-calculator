@@ -1,3 +1,4 @@
+from tkinter import *
 from customtkinter import *
 
 #shaping the app window
@@ -7,6 +8,10 @@ app.title("Calculator")
 
 set_default_color_theme("dark-blue")
 
+#entrybox
+entry1 = CTkEntry(master=app, width=359, height=160)
+entry1.pack(pady=20, padx=20)
+entry1.place(x = 19, y = 31)
 #button_1 is (
 btn_1 = CTkButton(master=app, width=87, height=63, corner_radius=32, text="(")
 btn_1.pack(pady=20, padx=20)
@@ -106,7 +111,6 @@ btn_19.place(x = 202, y = 506)
 btn_20 = CTkButton(master=app, width=87, height=63, corner_radius=32, text="+")
 btn_20.pack(pady=20, padx=20)
 btn_20.place(x = 293, y = 506)
-
 
 #starting the app
 app.mainloop()
