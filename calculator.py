@@ -6,16 +6,32 @@ app = CTk()
 app.geometry("400x600")
 app.title("Calculator")
 
-set_default_color_theme("dark-blue")
+set_appearance_mode("light")
 
 #entrybox
-entry1 = CTkEntry(master=app, width=359, height=160)
+entry1 = CTkEntry(master=app, width=359, height=160, state="disabled", corner_radius=30, fg_color="#D9D9D9", text_color="#000000", font=("Finger paint", 24), border_color="#D9D9D9")
 entry1.pack(pady=20, padx=20)
 entry1.place(x = 19, y = 31)
+
+#default button
+class DefaultButton:
+    def __init__(self, master, width, height, corner_radius, text, text_color, fg_color,font):
+        self.master = app
+        self.width = 87
+        self.height = 63
+        self.corner_radius = 30
+        self.text = ""
+        self.text_color = "#000000"
+        self.fg_color="#D9D9D9" 
+        self.font=("Finger paint", 24)
+        Pack(pady=20, padx=20)
+        Place(x = 21, y = 203)
+
+btn_1 = DefaultButton()
 #button_1 is (
-btn_1 = CTkButton(master=app, width=87, height=63, corner_radius=32, text="(")
-btn_1.pack(pady=20, padx=20)
-btn_1.place(x = 21, y = 203)
+btn_0 = CTkButton(master=app, width=87, height=63, corner_radius=30, text="(", text_color="#000000", fg_color="#D9D9D9", font=("Finger paint", 24))
+btn_0.pack(pady=20, padx=20)
+btn_0.place(x = 21, y = 203)
 
 #button_2 is )
 btn_2 = CTkButton(master=app, width=87, height=63, corner_radius=32, text=")")
